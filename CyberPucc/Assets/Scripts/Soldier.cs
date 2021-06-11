@@ -23,6 +23,8 @@ public class Soldier : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Vector3 moveToPlayerDir = player.transform.position - transform.position;
             transform.Translate(moveToPlayerDir.normalized * Time.deltaTime);
+            if (transform.position.x > player.transform.position.x)
+                GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {

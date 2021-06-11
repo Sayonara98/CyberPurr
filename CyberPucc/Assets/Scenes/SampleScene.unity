@@ -345,6 +345,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &907362285
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.2653756
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3193772
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681114605341322474, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837513758964915334, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978807852523087613, guid: bd9e4ef8b95894b469dcfe4eaa05a15e,
+        type: 3}
+      propertyPath: m_Name
+      value: Soldier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd9e4ef8b95894b469dcfe4eaa05a15e, type: 3}
 --- !u!1 &1206611772
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +432,7 @@ GameObject:
   - component: {fileID: 1206611775}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,6 +510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CaptainCat
       objectReference: {fileID: 0}
+    - target: {fileID: 390207965231205108, guid: 40a9ca42f1e0e2d4e909636cae96a945,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1289464621435746972, guid: 40a9ca42f1e0e2d4e909636cae96a945,
         type: 3}
       propertyPath: m_RootOrder
@@ -490,6 +569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601806231093893806, guid: 40a9ca42f1e0e2d4e909636cae96a945,
+        type: 3}
+      propertyPath: m_Name
+      value: Turret
       objectReference: {fileID: 0}
     - target: {fileID: 9135308239536458371, guid: 40a9ca42f1e0e2d4e909636cae96a945,
         type: 3}

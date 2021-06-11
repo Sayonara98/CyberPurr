@@ -148,6 +148,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1013975653395724998, guid: f55166a2e4a2ca54980f2c80f6841119,
     type: 3}
   fireRate: 2
+  fireSpeed: 8
 --- !u!1 &499954110952678303
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ GameObject:
   - component: {fileID: 2143494373860152307}
   - component: {fileID: 1877997433284684786}
   m_Layer: 0
-  m_Name: TEX_Bullet
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -50,7 +50,9 @@ public class Turret : MonoBehaviour
         Rigidbody2D bulletRb = missile.GetComponent<Rigidbody2D>();
         bulletRb.AddForce(turretPos.transform.up * fireSpeed, ForceMode2D.Impulse);
         canShoot = false;
+        turretPos.SetActive(false);
         yield return new WaitForSeconds(fireRate);
         canShoot = true;
+        turretPos.SetActive(true);
     }
 }

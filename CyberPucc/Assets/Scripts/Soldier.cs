@@ -42,5 +42,9 @@ public class Soldier : MonoBehaviour
                 GetComponent<Animator>().SetBool("onTheGround", onTheGround);
             }
         }
+        if (collision.gameObject.tag == "Soldier")
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        }
     }
 }

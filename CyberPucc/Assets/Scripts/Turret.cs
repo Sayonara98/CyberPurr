@@ -18,6 +18,8 @@ public class Turret : MonoBehaviour
     private Vector3 mousePos;
     private float angle;
 
+    private ObjectPool bulletPool;
+
     // Start is called before the first frame update
     void Start()
     {

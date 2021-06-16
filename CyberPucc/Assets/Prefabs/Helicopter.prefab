@@ -50,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   soldier: {fileID: 7978807852523087613, guid: bd9e4ef8b95894b469dcfe4eaa05a15e, type: 3}
+  fragment: {fileID: 5811112615859591211, guid: 14d1b0ada35f72d48960ec849961a9a5,
+    type: 3}
   explosion: {fileID: 5551659380775765498, guid: fad4c241b77a9c64c9def7810e1b367b,
     type: 3}
 --- !u!50 &459385818146908223

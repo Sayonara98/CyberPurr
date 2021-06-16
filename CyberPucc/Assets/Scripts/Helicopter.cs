@@ -11,6 +11,9 @@ public class Helicopter : MonoBehaviour
     private GameObject soldier;
 
     [SerializeField]
+    private GameObject fragment;
+
+    [SerializeField]
     private GameObject explosion;
 
     // Start is called before the first frame update
@@ -39,6 +42,7 @@ public class Helicopter : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             GetComponent<Animator>().SetBool("isHit", true);
+            Instantiate(fragment, transform.position, Quaternion.identity);
         }
     }
 }

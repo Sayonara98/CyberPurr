@@ -11,7 +11,7 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private float fireRate = 0.5f;
     [SerializeField]
-    private float fireSpeed = 8f;
+    private float fireSpeed = 10f;
     private bool canShoot = true;
 
     private Camera cam;

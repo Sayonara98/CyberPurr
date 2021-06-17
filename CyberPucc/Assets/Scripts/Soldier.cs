@@ -52,9 +52,17 @@ public class Soldier : MonoBehaviour
                 GetComponent<Animator>().SetBool("onTheGround", onTheGround);
             }
         }
+        
         if (collision.gameObject.tag == "Bullet")
         {
             isHitByBullet = true;
+            respawn();
+        }
+
+        if (collision.gameObject.tag == "Boundary")
+        {
+            gameObject.SetActive(false);
+            respawn();
         }
     }
 
@@ -63,5 +71,14 @@ public class Soldier : MonoBehaviour
         GetComponent<BoxCollider2D>().isTrigger = true;
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);
+    }
+
+    public void respawn()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        GetComponent<BoxCollider2D>().isTrigger = false;
+        isHitByBullet = false;
+        onTheGround = false;
+        GetComponent<Animator>().SetBool("onTheGround", onTheGround);
     }
 }

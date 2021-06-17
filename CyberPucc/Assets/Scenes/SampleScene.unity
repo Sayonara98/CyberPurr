@@ -764,6 +764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 390207965231205108, guid: 40a9ca42f1e0e2d4e909636cae96a945,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 390207965231205108, guid: 40a9ca42f1e0e2d4e909636cae96a945,
+        type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -861,6 +866,11 @@ PrefabInstance:
       propertyPath: sky2
       value: 
       objectReference: {fileID: 437781684}
+    - target: {fileID: 7641751585159563571, guid: 816966b6ddfa0bf468f5e632eef853a1,
+        type: 3}
+      propertyPath: poolSize
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8238575803285195307, guid: 816966b6ddfa0bf468f5e632eef853a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -920,6 +930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Airport
+      objectReference: {fileID: 0}
+    - target: {fileID: 9008523993481335336, guid: 816966b6ddfa0bf468f5e632eef853a1,
+        type: 3}
+      propertyPath: poolSize
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 816966b6ddfa0bf468f5e632eef853a1, type: 3}

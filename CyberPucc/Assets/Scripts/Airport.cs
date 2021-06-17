@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Airport : MonoBehaviour
 {
-    //[SerializeField]
-    //private GameObject helicopter1;
-    //[SerializeField]
-    //private GameObject helicopter2;
     [SerializeField]
     private Transform sky1;
     [SerializeField]

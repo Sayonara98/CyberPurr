@@ -7,9 +7,6 @@ public class Helicopter : MonoBehaviour
     [SerializeField]
     private float speed = 1.0f;
 
-    //[SerializeField]
-    //private GameObject soldier;
-
     [SerializeField]
     private GameObject fragment;
 
@@ -62,10 +59,17 @@ public class Helicopter : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("isHit", true);
             Instantiate(fragment, transform.position, Quaternion.identity);
+            StartCoroutine(Die());
         }
         if (collision.gameObject.tag == "Boundary")
         {
             gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameObject.SetActive(false);
     }
 }

@@ -64,4 +64,12 @@ public class Turret : MonoBehaviour
         canShoot = true;
         turretPos.SetActive(true);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Soldier")
+        {
+            Debug.Log("GameOver");
+        }
+    }
 }

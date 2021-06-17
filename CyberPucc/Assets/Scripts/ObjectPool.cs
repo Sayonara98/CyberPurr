@@ -13,8 +13,7 @@ public class ObjectPool : MonoBehaviour
 
     void Start()
     {
-        if (poolSize <= 0)
-            poolSize = 1;
+        poolObjects = new List<GameObject>();
         GameObject tmp;
         for (int i = 0; i < poolSize; i++)
         {

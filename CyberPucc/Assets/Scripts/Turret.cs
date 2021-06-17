@@ -18,7 +18,8 @@ public class Turret : MonoBehaviour
     private Vector3 mousePos;
     private float angle;
 
-    private ObjectPool bulletPool;
+    [SerializeField]
+    private ObjectPool objectsPool;
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +48,16 @@ public class Turret : MonoBehaviour
 
     private IEnumerator Shoot()
     {
-        GameObject missile = Instantiate(bulletPrefab, turretPos.transform.position, turretPos.transform.rotation) as GameObject;
+        //GameObject missile = Instantiate(bulletPrefab, turretPos.transform.position, turretPos.transform.rotation) as GameObject;
         //missile.transform.Translate(0.0f, 0.4f, 0.0f);
+        GameObject missile = objectsPool.GetPooledObject();
+        if (missile != null)
+        {
+            missile.transform.position = turretPos.transform.position;
+            missile.transform.rotation = turretPos.transform.rotation;
+            missile.SetActive(true);
+
+        }
         Rigidbody2D bulletRb = missile.GetComponent<Rigidbody2D>();
         bulletRb.AddForce(turretPos.transform.up * fireSpeed, ForceMode2D.Impulse);
         canShoot = false;

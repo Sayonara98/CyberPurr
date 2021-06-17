@@ -18,9 +18,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Helicopter")
+        if (collision.gameObject.tag == "Helicopter" || collision.gameObject.tag == "Boundary")
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

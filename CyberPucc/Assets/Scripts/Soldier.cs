@@ -9,6 +9,8 @@ public class Soldier : MonoBehaviour
 
     private bool onTheGround = false;
 
+    private bool isHitByBullet = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,10 @@ public class Soldier : MonoBehaviour
             if (transform.position.x > player.transform.position.x)
                 GetComponent<SpriteRenderer>().flipX = true;
         }
+        else if (isHitByBullet)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 1;
+        }
         else
         {
             transform.Translate(parachuteSpeed * Time.deltaTime * Vector3.down);
@@ -36,15 +42,26 @@ public class Soldier : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            if (onTheGround == false)
+            if (isHitByBullet == true)
+            {
+                StartCoroutine(Die());
+            }
+            else if (onTheGround == false)
             {
                 onTheGround = true;
                 GetComponent<Animator>().SetBool("onTheGround", onTheGround);
             }
         }
-        if (collision.gameObject.tag == "Soldier")
+        if (collision.gameObject.tag == "Bullet")
         {
-            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+            isHitByBullet = true;
         }
+    }
+
+    private IEnumerator Die()
+    {
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
     }
 }

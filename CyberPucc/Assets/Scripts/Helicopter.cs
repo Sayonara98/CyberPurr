@@ -44,5 +44,9 @@ public class Helicopter : MonoBehaviour
             GetComponent<Animator>().SetBool("isHit", true);
             Instantiate(fragment, transform.position, Quaternion.identity);
         }
+        if (collision.gameObject.tag == "Boundary")
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

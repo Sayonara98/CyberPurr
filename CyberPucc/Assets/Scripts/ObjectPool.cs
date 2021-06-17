@@ -25,12 +25,22 @@ public class ObjectPool : MonoBehaviour
 
     public GameObject GetPooledObject()
     {
+        bool expand = true;
         for (int i = 0; i < poolSize; i++)
         {
             if (poolObjects[i].activeInHierarchy == false)
             {
+                expand = false;
                 return poolObjects[i];
             }
+        }
+
+        if (expand)
+        {
+            GameObject obj = Instantiate(ObjectToPool);
+            obj.SetActive(false);
+            poolObjects.Add(obj);
+            return obj;
         }
 
         return null;

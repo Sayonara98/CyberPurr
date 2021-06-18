@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    public GameManager gameManager;
     [SerializeField]
     private GameObject turretPos;
     [SerializeField]
@@ -17,10 +18,16 @@ public class Turret : MonoBehaviour
     private Camera cam;
     private Vector3 mousePos;
     private float angle;
+    private bool isGameOver = false;
 
     [SerializeField]
     private ObjectPool objectsPool;
 
+
+    public void Replay()
+    {
+        isGameOver = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +37,15 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        if (Input.GetMouseButton(0) && canShoot)
+        if (isGameOver == false)
         {
-            StartCoroutine(Shoot());
-        }
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+            if (Input.GetMouseButton(0) && canShoot)
+            {
+                StartCoroutine(Shoot());
+            }
+        }        
     }
 
     private void FixedUpdate()
@@ -69,7 +79,8 @@ public class Turret : MonoBehaviour
     {
         if (collision.gameObject.tag == "Soldier")
         {
-            Debug.Log("GameOver");
+            gameManager.GameOver();
+            isGameOver = true;
         }
     }
 }

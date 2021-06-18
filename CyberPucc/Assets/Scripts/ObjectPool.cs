@@ -46,5 +46,11 @@ public class ObjectPool : MonoBehaviour
         return null;
     }
 
-
+    public void DisableAllObject()
+    {
+        for (int i = 0; i < poolSize; i++)
+        {
+            poolObjects[i].SetActive(false);
+        }
+    }
 }

@@ -16,6 +16,13 @@ public class Airport : MonoBehaviour
 
     private bool canFly = true;
 
+    public void Replay()
+    {
+        helicoptersPool1.DisableAllObject();
+        helicoptersPool2.DisableAllObject();
+        canFly = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

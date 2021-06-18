@@ -20,6 +20,11 @@ public class Helicopter : MonoBehaviour
     private float dropSoldierCooldown = 3f;
     private float countDown = 2f;
 
+    public void Restart()
+    {
+        soldierPool.DisableAllObject();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

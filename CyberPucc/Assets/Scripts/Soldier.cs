@@ -57,6 +57,7 @@ public class Soldier : MonoBehaviour
         {
             isHitByBullet = true;
             respawn();
+            Score.score++;
         }
     }
 

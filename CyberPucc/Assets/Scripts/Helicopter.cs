@@ -60,6 +60,7 @@ public class Helicopter : MonoBehaviour
             GetComponent<Animator>().SetBool("isHit", true);
             Instantiate(fragment, transform.position, Quaternion.identity);
             StartCoroutine(Die());
+            Score.score++;
         }
     }
 

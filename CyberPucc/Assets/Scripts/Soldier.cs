@@ -58,12 +58,6 @@ public class Soldier : MonoBehaviour
             isHitByBullet = true;
             respawn();
         }
-
-        if (collision.gameObject.tag == "Boundary")
-        {
-            gameObject.SetActive(false);
-            respawn();
-        }
     }
 
     private IEnumerator Die()
@@ -80,5 +74,11 @@ public class Soldier : MonoBehaviour
         isHitByBullet = false;
         onTheGround = false;
         GetComponent<Animator>().SetBool("onTheGround", onTheGround);
+    }
+
+    private void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
+        respawn();
     }
 }

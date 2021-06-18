@@ -61,15 +61,16 @@ public class Helicopter : MonoBehaviour
             Instantiate(fragment, transform.position, Quaternion.identity);
             StartCoroutine(Die());
         }
-        if (collision.gameObject.tag == "Boundary")
-        {
-            gameObject.SetActive(false);
-        }
     }
 
     private IEnumerator Die()
     {
         yield return new WaitForSeconds(0.5f);
+        gameObject.SetActive(false);
+    }
+
+    private void OnBecameInvisible()
+    {
         gameObject.SetActive(false);
     }
 }
